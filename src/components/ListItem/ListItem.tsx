@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./ListItem.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faSave } from "@fortawesome/free-regular-svg-icons";
-import { faEdit, faRemove } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faRemove, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { TextareaAutosize } from "@mui/material";
 import { Item } from "../../lib/item-model";
 
@@ -38,7 +38,7 @@ const ListItem = ({ item, onRemoveClick, onSaveClick }: ListItemProps) => {
         <>
             <div className="item-row">
                 <div className="item-content">
-                    <FontAwesomeIcon className="icon" icon={faCircle} onClick={() => completeItem()}></FontAwesomeIcon>
+                    <FontAwesomeIcon className="icon" icon={item.completed ? faCheck: faCircle} onClick={() => completeItem()}></FontAwesomeIcon>
                     {isBeingEdited ? <TextareaAutosize value={text} onKeyDown={event => event.key === "Enter" && text.length > 0 ? saveItem() : ""} onChange={e => setText(e.target.value)}></TextareaAutosize> : <p onClick={() => (setIsBeingEdited(true))}>{item.completed ? <s className="completed-text">{text}</s> : text}</p>}
                 </div>
                 <div className="action-buttons">
