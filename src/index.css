@@ -1,0 +1,72 @@
+:root {
+    font-family: "Source Serif Pro", serif, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #23323a;
+   
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+}
+
+
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 8px 8px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #425a66;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.bg {
+    background-color: #23323a;
+}
+
+.bg-accent {
+    background-color: #425a66;
+}
+
+.flex {
+    display: flex;
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.87);
+    font-size: medium;
+    font-family: 'Source sans Pro';
+}
+
+/* For PC screens */
+@media (min-width: 769px) {
+    :root {
+        background-color: #425a66;
+    }
+}
+

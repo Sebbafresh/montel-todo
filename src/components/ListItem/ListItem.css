@@ -1,0 +1,44 @@
+.item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    min-height: 36px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    width: 100%;
+    min-width: 200px;
+}
+
+.action-buttons {
+    display: flex;
+}
+
+.completed-text {
+    color: grey;
+}
+
+textarea {
+    resize: none;
+    height: auto;
+    width: 100%;
+}
+
+/* For PC screens */
+@media (min-width: 769px) {
+    .item-content {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        width: 100%;
+        min-width: 600px;
+    }
+}
